@@ -11,9 +11,10 @@
     "lib": ["esnext", "dom"]
   },
   "include": [
-    "./src/js/**/*.ts",
-    "./src/js/**/*.tsx",
-    "./src/js/**/*.vue",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    // "./src/**/*.vue",
+    "*.ts",
     "tests/**/*.ts",
     "tests/**/*.tsx"
   ]
