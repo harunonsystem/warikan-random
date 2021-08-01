@@ -1,5 +1,5 @@
 import { defineComponent } from "vue";
-import  Warikan  from './components/warikan.vue'
+import  Warikan  from './components/Warikan.vue'
 import  Footer  from './components/Footer.vue';
 export default defineComponent({
   setup() {
