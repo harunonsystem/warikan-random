@@ -9,7 +9,7 @@ export default defineComponent({
           <h1 class="text-center text-3xl font-bold pt-8">らんだむわりかんあぷり</h1>
           <div class="flex flex-col justify-centerm-4 min-h-screen">
             <div class="flex-grow">
-            {/* <Warikan /> */}
+            <Warikan />
             </div>
           </div>
           <Footer />

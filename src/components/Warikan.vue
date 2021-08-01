@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from "@vue/runtime-core"
+import { ref, defineComponent } from "vue"
 
 export default defineComponent({
     name: "Warikan",
@@ -28,13 +28,8 @@ export default defineComponent({
         const sum = ref(3000)
         const warikan = ref(0)
 
-        return {people, sum, warikan}
-    },
-    methods: {
-        huga(): any{
+        function huga(people:number, sum:number, warikan:number): any{
             const array:any = [];
-            const people = this.people;
-            const sum = this.sum;
             const reducer = (sum:number,currentValue:number) => sum + currentValue;
             for(let i = 1; i <= people; i++) {     
             if(array.length === people -1) {
@@ -57,11 +52,12 @@ export default defineComponent({
             for (let i = 0; i < array.length; i++) {
                 array2.push(sum*array[i]/100)
             }
-            this.warikan = array2
+            warikan = array2
             return array2;
         }
+        return {people, sum, warikan, huga}
+    },
 
-    }
 
 })
 </script>
