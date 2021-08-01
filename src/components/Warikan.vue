@@ -19,7 +19,9 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from "@vue/runtime-core"
+
+export default defineComponent({
     data() {
         return {
             people: 5,
@@ -67,7 +69,7 @@ export default {
 
     }
 
-}
+})
 </script>
 
 <style>
