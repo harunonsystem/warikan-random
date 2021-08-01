@@ -19,16 +19,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@vue/runtime-core"
+import { ref, defineComponent } from "@vue/runtime-core"
 
 export default defineComponent({
-    data() {
-        return {
-            people: 5,
-            sum: 3000,
-            warikan: 0,
-            
-        }
+    name: "Warikan",
+    setup:() => {
+        const people = ref(5)
+        const sum = ref(3000)
+        const warikan = ref(0)
+
+        return {people, sum, warikan}
     },
     methods: {
         huga(): any{
@@ -52,19 +52,13 @@ export default defineComponent({
                     array.push(hoge);
                 }
             } 
-            console.log(array)
             }
             const array2:any = []
             for (let i = 0; i < array.length; i++) {
                 array2.push(sum*array[i]/100)
             }
-
-            console.log('warikan: ' + array)
-            console.log('warikan2: ' + array2)
             this.warikan = array2
-
             return array2;
-
         }
 
     }
