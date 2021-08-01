@@ -19,17 +19,22 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from "vue"
+import { defineComponent } from "vue"
 
 export default defineComponent({
-    name: "Warikan",
-    setup:() => {
-        const people = ref(5)
-        const sum = ref(3000)
-        const warikan = ref(0)
-
-        function huga(people:number, sum:number, warikan:number): any{
+    data() {
+        return {
+            people: 5,
+            sum: 3000,
+            warikan: 0,
+            
+        }
+    },
+    methods: {
+        huga(): any{
             const array:any = [];
+            const people = this.people;
+            const sum = this.sum;
             const reducer = (sum:number,currentValue:number) => sum + currentValue;
             for(let i = 1; i <= people; i++) {     
             if(array.length === people -1) {
@@ -52,12 +57,10 @@ export default defineComponent({
             for (let i = 0; i < array.length; i++) {
                 array2.push(sum*array[i]/100)
             }
-            warikan = array2
+            this.warikan = array2
             return array2;
         }
-        return {people, sum, warikan, huga}
-    },
-
+    }
 
 })
 </script>
